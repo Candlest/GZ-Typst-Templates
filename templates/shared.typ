@@ -9,9 +9,7 @@
 
   show raw.where(block: true): block.with(fill: luma(240), inset: (x: 1.25em, y: 1em), width: 100%, radius: 4pt)
 
-  // 在 Typst 0.13+ 中，会导致代码块无法正常显示，暂时注释掉
-  // 在 Typst 0.13+ 中，代码块似乎默认无首行缩进
-  //show raw.where(block: true): par.with(first-line-indent: 0em, justify: true, leading: 8pt)
+  show raw.where(block: true): set par(justify: true, leading: 8pt)
 
   show raw.where(block: false): box.with(
     fill: luma(240),
